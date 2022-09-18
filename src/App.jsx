@@ -1,5 +1,12 @@
+import Navbar from "./components/Navbar";
 const App = () => {
-  return <div>Welcome to Gommerce</div>;
+  return (
+    <main>
+      <div className="wrapper">
+        <Navbar />
+      </div>
+    </main>
+  );
 };
 
 export default App;
