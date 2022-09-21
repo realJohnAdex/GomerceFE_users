@@ -2,6 +2,7 @@ import React from 'react'
 import './Slider.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
+import SliderCard from '../SliderCard'
 
 // Swiper CSS
 import 'swiper/swiper.min.css'
@@ -10,7 +11,7 @@ import 'swiper/modules/pagination/pagination.min.css'
 import 'swiper/modules/scrollbar/scrollbar.min.css'
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
-const Slider = () => {
+const Slider = ({ cards }) => {
   return (
     <div className="container">
       <Swiper
@@ -21,7 +22,18 @@ const Slider = () => {
         slidesPerView={4}
         spaceBetween={30}
       >
-        {/* <SwiperSlide></SwiperSlide> */}
+        {cards.map((card, index) => {
+          return (
+            <SwiperSlide>
+              <SliderCard
+                key={index}
+                name={card.name}
+                image={card.image}
+                price={card.price}
+              />
+            </SwiperSlide>
+          )
+        })}
       </Swiper>
     </div>
   )
