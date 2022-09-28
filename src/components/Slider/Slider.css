@@ -1,15 +1,43 @@
 .container {
-  padding: 32px 70px;
+  box-sizing: border-box;
+  padding: 32px 55px;
   display: flex;
   position: relative;
   justify-content: center;
   flex-direction: column;
   gap: 32px;
   background-color: white;
-  width: 1012px;
-  height: 600px;
+  width: 100%;
+  max-width: 1012px;
+  height: 450px;
   margin: 40px 0;
   box-shadow: 0px 2px 2px rgba(142, 142, 142, 0.25);
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    max-width: 360px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+.swiper-slide {
+  margin-left: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .category {
@@ -21,7 +49,6 @@
 .slider_container {
   display: flex;
   justify-content: center;
-  padding: 0 10px;
 }
 
 .slider_container > .swiper {
@@ -31,11 +58,13 @@
 .swiper-button-prev:after,
 .swiper-button-next:after {
   color: black;
-  font-size: 40px !important;
+  font-size: 25px !important;
 }
 .swiper-button-prev,
 .swiper-button-next {
-  padding: 25px;
+  width: 40px;
+  padding: 12px 15px;
+  height: 45px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 }
