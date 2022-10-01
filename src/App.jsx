@@ -2,7 +2,9 @@ import Navbar from "./components/Navbar";
 import SideNav from "./components/SideNav";
 import Footer from "./components/Footer";
 import SideContents from "./components/SideContents";
+import Slider from "./components/Slider";
 import { Box, Grid } from "@mui/material";
+
 const App = () => {
   return (
     <main>
@@ -21,6 +23,7 @@ const App = () => {
           </Grid>
         </Grid>
       </div>
+      <Slider />
       <Footer />
     </main>
   );
