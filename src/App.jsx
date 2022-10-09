@@ -11,16 +11,12 @@ const App = () => {
     <main>
       <Navbar />
       <div className="wrapper">
-        <Grid container direction="row" spacing={2} my={2}>
-          <Grid item xs={4}>
-            <Box>
-              <SideNav />
-            </Box>
+        <Grid container direction="row" spacing={1}>
+          <Grid item xs={3}>
+            <SideNav />
           </Grid>
-          <Grid item xs={8}>
-            <Box>
-              <SideContents />
-            </Box>
+          <Grid item xs={9}>
+            <SideContents />
           </Grid>
         </Grid>
       </div>
