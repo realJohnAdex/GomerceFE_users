@@ -1,7 +1,7 @@
 import React from "react";
-
+import Slider from "../Slider";
 const SideContents = () => {
-  return <div>SideContents</div>;
+  return <Slider />;
 };
 
 export default SideContents;

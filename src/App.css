@@ -10,10 +10,8 @@ main {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .wrapper {
-  background-color: bisque;
   margin: 0 auto;
   width: 100%;
   max-width: 1500px;
