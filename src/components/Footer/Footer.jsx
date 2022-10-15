@@ -12,6 +12,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   right: "0px",
   bottom: "0px",
   background: "#B69D74",
+  position: "relative",
 }));
 
 const FooterContent = styled(Box)(({ theme }) => ({

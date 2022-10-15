@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Collapse from "@mui/material/Collapse";
 import {
   CategoriesSideBar,
   categoryText,
@@ -9,6 +8,7 @@ import {
 import "./SideNav.jsx";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import categoriesData from "../../SetUpData/categoriesData";
 import {
   List,
   ListSubheader,
@@ -17,7 +17,6 @@ import {
 } from "@mui/material";
 const SideNav = () => {
   const [open, setOpen] = useState(false);
-
   return (
     <CategoriesSideBar>
       <List
@@ -26,30 +25,15 @@ const SideNav = () => {
         subheader={<ListSubheader sx={categoryText}>Categories</ListSubheader>}
       >
         <CategoriesListWrapper mt={2}>
-          <ListItemButton>
-            <ListItemText primary="Phones & Accessories" sx={listLabelStyles} />
-            {open ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText primary="Health & Beauty" sx={listLabelStyles} />
-            {open ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText primary="Home & Office" sx={listLabelStyles} />
-            {open ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText primary="Fashion" sx={listLabelStyles} />
-            {open ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText primary="Gaming" sx={listLabelStyles} />
-            {open ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText primary="Other Categories" sx={listLabelStyles} />
-            {open ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
+          {categoriesData.map((category) => {
+            const { id, title, subList } = category;
+            return (
+              <ListItemButton key={id}>
+                <ListItemText primary={title} sx={listLabelStyles} />
+                {subList && (open ? <ExpandLess /> : <ExpandMore />)}
+              </ListItemButton>
+            );
+          })}
         </CategoriesListWrapper>
       </List>
     </CategoriesSideBar>

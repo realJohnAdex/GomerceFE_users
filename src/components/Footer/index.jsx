@@ -15,6 +15,8 @@ import {
 import FooterColumn from "../FooterColumn";
 import Divider from "@mui/material/Divider";
 import footerData from "../../SetUpData/footerColumnData";
+
+import FloatingBtn from "../FloatingBtn";
 const Footer = () => {
   return (
     <FooterContainer>
@@ -40,6 +42,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Gomerce
         </Typography>
       </FooterBottom>
+      <FloatingBtn />
     </FooterContainer>
   );
 };

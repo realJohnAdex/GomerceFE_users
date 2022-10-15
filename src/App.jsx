@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import SideNav from "./components/SideNav";
 import Footer from "./components/Footer";
 import SideContents from "./components/SideContents";
-import { Box, Grid, useTheme } from "@mui/material";
+import { Grid, useTheme } from "@mui/material";
 
 const App = () => {
   const theme = useTheme();
@@ -20,6 +20,7 @@ const App = () => {
           </Grid>
         </Grid>
       </div>
+
       <Footer />
     </main>
   );
