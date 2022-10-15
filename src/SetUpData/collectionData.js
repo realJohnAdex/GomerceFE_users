@@ -1,5 +1,5 @@
 import dress from "../Assets/Images/istockphoto-1217970962-612x612.jpg";
-const data = [
+const collectionData = [
   {
     id: 1,
     title: "Dress",
@@ -38,4 +38,4 @@ const data = [
   // },
 ];
 
-export default data;
+export default collectionData;

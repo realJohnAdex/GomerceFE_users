@@ -6,13 +6,13 @@ import {
 } from "./Collections";
 import { Typography } from "@mui/material";
 import CollectionCard from "../CollectionCard";
-import data from "../../SetUpData/data";
+import collectionData from "../../SetUpData/collectionData";
 const Collections = () => {
   return (
     <CollectionsWrapper>
       <Typography sx={collectionHeading}>Collections</Typography>
       <CollectionRow>
-        {data.map((data, index) => {
+        {collectionData.map((data, index) => {
           return (
             <CollectionCard
               key={index}
@@ -24,7 +24,7 @@ const Collections = () => {
         })}
       </CollectionRow>
       <CollectionRow>
-        {data.map((data, index) => {
+        {collectionData.map((data, index) => {
           return (
             <CollectionCard
               key={index}

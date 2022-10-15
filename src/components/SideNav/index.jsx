@@ -17,9 +17,7 @@ import {
 } from "@mui/material";
 const SideNav = () => {
   const [open, setOpen] = useState(false);
-  const openNested = () => {
-    setOpen(!open);
-  };
+
   return (
     <CategoriesSideBar>
       <List
@@ -28,37 +26,30 @@ const SideNav = () => {
         subheader={<ListSubheader sx={categoryText}>Categories</ListSubheader>}
       >
         <CategoriesListWrapper mt={2}>
-          <ListItemButton onClick={openNested}>
+          <ListItemButton>
             <ListItemText primary="Phones & Accessories" sx={listLabelStyles} />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
-          <ListItemButton onClick={openNested}>
+          <ListItemButton>
             <ListItemText primary="Health & Beauty" sx={listLabelStyles} />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
-          <ListItemButton onClick={() => openNested()}>
+          <ListItemButton>
             <ListItemText primary="Home & Office" sx={listLabelStyles} />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
-          <ListItemButton onClick={openNested}>
+          <ListItemButton>
             <ListItemText primary="Fashion" sx={listLabelStyles} />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
-          <ListItemButton onClick={openNested}>
+          <ListItemButton>
             <ListItemText primary="Gaming" sx={listLabelStyles} />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
-          <ListItemButton onClick={openNested}>
+          <ListItemButton>
             <ListItemText primary="Other Categories" sx={listLabelStyles} />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemText primary="Starred" />
-              </ListItemButton>
-            </List>
-          </Collapse>
         </CategoriesListWrapper>
       </List>
     </CategoriesSideBar>
