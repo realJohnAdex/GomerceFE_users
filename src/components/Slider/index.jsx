@@ -34,8 +34,7 @@ const Slider = () => {
     <div className="container">
       <h4 className="category">{cards.category}</h4>
       <div className="slider_container">
-        <Swiper
-          navigation={true}
+        <Swiper navigation={true}
           grabCursor={true}
           modules={[Navigation, A11y]}
           className="mySwiper"
