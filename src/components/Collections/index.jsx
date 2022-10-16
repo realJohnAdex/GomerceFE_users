@@ -7,7 +7,10 @@ import {
 import { Typography } from "@mui/material";
 import CollectionCard from "../CollectionCard";
 import collectionData from "../../SetUpData/collectionData";
+import { useSelector } from "react-redux";
 const Collections = () => {
+  const products = useSelector((state) => state.productReducer);
+  console.log(products);
   return (
     <CollectionsWrapper>
       <Typography sx={collectionHeading}>Collections</Typography>
