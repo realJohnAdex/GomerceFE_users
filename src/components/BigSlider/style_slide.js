@@ -1,10 +1,3 @@
-// import styled from '@emotion/styled';
-// import { Button, Modal, Typography} from "@mui/material";
-// import { cyan } from '@mui/material/colors';
-// import { Box } from "@mui/system";
-
-// import { Button} from "@mui/material";
-
 import styled from "styled-components";
 import { mobile } from '../../responsive'
 
