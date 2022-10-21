@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import {
   CategoriesSideBar,
   categoryText,
@@ -8,7 +9,6 @@ import {
 import "./SideNav.jsx";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import categoriesData from "../../SetUpData/categoriesData";
 import {
   List,
   ListSubheader,
@@ -16,6 +16,7 @@ import {
   ListItemButton,
 } from "@mui/material";
 const SideNav = () => {
+  const categories = useSelector((state) => state.productCategories);
   const [open, setOpen] = useState(false);
   return (
     <CategoriesSideBar>
@@ -25,12 +26,11 @@ const SideNav = () => {
         subheader={<ListSubheader sx={categoryText}>Categories</ListSubheader>}
       >
         <CategoriesListWrapper mt={2}>
-          {categoriesData.map((category) => {
-            const { id, title, subList } = category;
+          {categories.map((category, index) => {
             return (
-              <ListItemButton key={id}>
-                <ListItemText primary={title} sx={listLabelStyles} />
-                {subList && (open ? <ExpandLess /> : <ExpandMore />)}
+              <ListItemButton key={index}>
+                <ListItemText primary={category} sx={listLabelStyles} />
+                {open ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
             );
           })}

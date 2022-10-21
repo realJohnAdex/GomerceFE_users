@@ -44,6 +44,7 @@ const listLabelStyles = {
   display: "flex",
   alignItems: "center",
   color: "#000000",
+  textTransform: "capitalize",
 };
 export {
   CategoriesSideBar,

@@ -4,5 +4,6 @@ import axios from "axios";
 const url = "https://fakestoreapi.com/products/";
 
 const fetchProducts = () => axios.get(`${url}${"?limit=6"}`);
+const fetchProductsCategories = () => axios.get(`${url}${"categories"}`);
 
-export { fetchProducts };
+export { fetchProducts, fetchProductsCategories };

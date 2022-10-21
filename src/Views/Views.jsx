@@ -14,16 +14,17 @@ import PageNotFound from "../pages/PageNotFound";
 const Views = () => {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/checkout-address" element={<CheckoutAddress />} />
-      <Route path="/checkout-payment" element={<CheckoutPayment />} />
-      <Route path="/item-page" element={<ItemPage />} />
-      <Route path="/login" element={<LogIn />} />
-      <Route path="/order-detail" element={<OrdersDetail />} />
-      <Route path="/order-history" element={<OrdersHistory />} />
-      <Route path="/search" element={<SearchPage />} />
-      <Route path="/signup" element={<SignUp />} />
+      <Route exact path="/" element={<LandingPage />} />
+      <Route exact path="/home" element={<LandingPage />} />
+      <Route exact path="/cart" element={<Cart />} />
+      <Route exact path="/checkout-address" element={<CheckoutAddress />} />
+      <Route exact path="/checkout-payment" element={<CheckoutPayment />} />
+      <Route exact path="/item-page" element={<ItemPage />} />
+      <Route exact path="/login" element={<LogIn />} />
+      <Route exact path="/order-detail" element={<OrdersDetail />} />
+      <Route exact path="/order-history" element={<OrdersHistory />} />
+      <Route exact path="/search" element={<SearchPage />} />
+      <Route exact path="/signup" element={<SignUp />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

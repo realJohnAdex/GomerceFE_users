@@ -18,24 +18,6 @@ const collectionData = [
     img: dress,
     link: "www.google.com",
   },
-  // {
-  //   id: 4,
-  //   title: "Dress",
-  //   img: dress,
-  //   link: "www.google.com",
-  // },
-  // {
-  //   id: 5,
-  //   title: "Computer Accessories",
-  //   img: dress,
-  //   link: "www.google.com",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Computer Accessories",
-  //   img: dress,
-  //   link: "www.google.com",
-  // },
 ];
 
 export default collectionData;

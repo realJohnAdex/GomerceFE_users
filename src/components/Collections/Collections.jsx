@@ -11,7 +11,6 @@ const CollectionsWrapper = styled(Box)(({ theme }) => ({
 }));
 
 const CollectionRow = styled(Box)(({ theme }) => ({
-  // margin: "2px auto",
   width: "100%",
   display: "flex",
   flexDirection: "row",

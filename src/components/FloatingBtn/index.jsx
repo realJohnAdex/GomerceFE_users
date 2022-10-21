@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import { FloatingBtnStyles, IconStyle } from "./FloatingBtn";
+import { FloatingBtnStyles } from "./FloatingBtn";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 const FloatingBtn = () => {
   return (

@@ -6,9 +6,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "./App.css";
-import productReducer from "./reducers/products";
+import { productReducer, productCategories } from "./reducers/products";
 const store = configureStore(
-  { reducer: { productReducer } },
+  { reducer: { productReducer, productCategories } },
   compose(applyMiddleware(thunk))
 );
 

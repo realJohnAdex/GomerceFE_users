@@ -1,16 +1,20 @@
-const productReducer = (products = [], action) => {
+import { FETCH_ALL, FETCH_CATEGORIES } from "../constants/actionTypes";
+const productReducer = (state = [], action) => {
   switch (action.type) {
-    case "FETCH_ALL":
+    case FETCH_ALL:
       return action.payload;
-    case "FETCH_SPECIFIC":
-      return products;
-
-    case "FETCH_ONE":
-      return products;
 
     default:
-      return products;
+      return state;
   }
 };
 
-export default productReducer;
+const productCategories = (state = [], action) => {
+  switch (action.type) {
+    case FETCH_CATEGORIES:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+export { productReducer, productCategories };
