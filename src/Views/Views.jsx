@@ -8,7 +8,7 @@ import ItemPage from "../pages/ItemPage";
 import LogIn from "../pages/LogIn";
 import OrdersDetail from "../pages/OrdersDetail";
 import OrdersHistory from "../pages/OrdersHistory";
-import SearchPage from "../pages/SearchPage";
+import SearchPage from "../pages/SearchPage/SearchPage";
 import SignUp from "../pages/SignUp";
 import PageNotFound from "../pages/PageNotFound";
 const Views = () => {
