@@ -3,17 +3,16 @@ import { styled } from "@mui/material/styles";
 
 const CollectionsWrapper = styled(Box)(({ theme }) => ({
   maxWidth: "1012px",
-  height: "892px",
   left: "358px",
   display: "flex",
   flexWrap: "wrap",
-  padding: "3%",
 }));
 
 const CollectionRow = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex",
   flexDirection: "row",
+  margin: "3% auto",
 }));
 const collectionHeading = {
   width: "95px",

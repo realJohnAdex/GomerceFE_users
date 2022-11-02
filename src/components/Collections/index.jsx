@@ -26,18 +26,6 @@ const Collections = () => {
           );
         })}
       </CollectionRow>
-      <CollectionRow>
-        {collectionData.map((data, index) => {
-          return (
-            <CollectionCard
-              key={index}
-              title={data.title}
-              image={data.img}
-              link={data.link}
-            />
-          );
-        })}
-      </CollectionRow>
     </CollectionsWrapper>
   );
 };
